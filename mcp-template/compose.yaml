@@ -1,0 +1,10 @@
+services:
+  mcp-server-template:
+    #build: . # Build from the current directory (where dockerfile is)
+    container_name: mcp-template
+    image: mcp-template:latest
+    hostname: mcp-template
+    ports:
+      - "8000:8000"  # Map host port 8000 to container port 8000 for external access
+    #environment:
+     # - PROXY_KEY=
