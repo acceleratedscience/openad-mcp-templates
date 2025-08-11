@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install mcpo uv 
-RUN pip install mcp openad
+#RUN pip install mcp openad
 
 COPY . .
 RUN pip install .
