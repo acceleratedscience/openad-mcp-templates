@@ -3,7 +3,7 @@ services:
     build: . # Build from the current directory (where dockerfile is)
     container_name: mcp-server-template
     image: mcp-server-template:latest
-    hostname: mcp-smi-ted
+    hostname: mcp-server-template
     ports:
       - "8000:8000"
       - "8001:8001"  # Map host port 8000 to container port 8000 for external access
