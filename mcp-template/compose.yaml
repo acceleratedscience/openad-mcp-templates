@@ -1,8 +1,8 @@
 services:
   mcp-server:
     build: . # Build from the current directory (where dockerfile is)
-    container_name: mcp-smi-ted
-    image: quay.io/ibmdpdev/mcp-template:latest
+    container_name: mcp-server-template
+    image: quay.io/ibmdpdev/mcp-server-template:latest
     hostname: mcp-smi-ted
     ports:
       - "8000:8000"
