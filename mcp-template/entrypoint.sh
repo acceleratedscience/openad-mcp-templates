@@ -31,5 +31,5 @@ done
 
 echo "mcp-server-infer service is ready at $HOST:$PORT. Starting mcpo proxy..."
 
-# Start the mcpo proxy service
+# Start the mcpo proxy service the blow starts it a "streamable_http" this can be changed to sse to support sse
 mcpo --port 8000 --host 0.0.0.0 --server-type "streamable_http" -- http://127.0.0.1:8001/mcp
