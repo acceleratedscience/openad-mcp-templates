@@ -56,3 +56,18 @@ This Directory has a simple Echo examples of an MCP qeith ***Openapi*** interfac
 This directory shows how to create inferences running against the OpenAD Biomedical Model Protein and Small Molecule Inferences.
 
 Current setup requires access to the OpenAD , gateway. Subsequent iteractions will provide single Instance desktop deployments using podman
+
+
+## Testing Services
+
+you can use curl to test your service , API key is only required if behind a fire wall.<br>
+
+```
+export APIKEY=""
+
+echo -e "\nTesting service $service"
+curl -i --fail --silent --output /dev/null  http://127.0.0.1:8000/openapi.json -H "Authorization: Bearer ${APIKEY}"
+if [ $? -ne 0 ]; then
+echo -e "Error: did not connect to via OpenAPI to  http://127.0.0.1:8000/openapi.json"
+fi
+```
