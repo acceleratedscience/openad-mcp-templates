@@ -1,0 +1,10 @@
+services:
+    mcp-server:
+        #build: . # Build from the current directory (where dockerfile is)
+        container_name: mcp-infer1
+        image: quay.io/ibmdpdev/mcp-infer1:latest
+        hostname: mcp-infer1
+        ports:
+            - "8000:8000" # Map host port 8000 to container port 8000 for external access
+        environment:
+            - PROXY_KEY=

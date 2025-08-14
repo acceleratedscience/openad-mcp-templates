@@ -1,0 +1,11 @@
+services:
+  mcp-server:
+    build: . # Build from the current directory (where dockerfile is)
+    container_name: mcp-smi-ted
+    image: quay.io/ibmdpdev/mcp-smited:latest
+    hostname: mcp-smi-ted
+    ports:
+      - "8000:8000"
+      - "8001:8001"  # Map host port 8000 to container port 8000 for external access
+    environment:
+       - PROXY_KEY=

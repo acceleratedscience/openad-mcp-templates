@@ -1,0 +1,26 @@
+[project]
+name = "mcp-server-infer"
+version = "0.6.2"
+description = "A Model Context Protocol server providing tools for time queries and timezone conversions for LLMs"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Mariusz 'maledorak' Korzekwa", email = "mariusz@korzekwa.dev" },
+]
+keywords = ["time", "timezone", "mcp", "llm"]
+license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "mcp>=1.0.0",
+    "openad"
+    ,
+]
+
+[project.scripts]
+mcp-server-infer = "mcp_server_infer:main"
